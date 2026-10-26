@@ -137,7 +137,7 @@ def build_html(result):
             A("<div class='note'>리포트에는 최대 %d건까지만 표시합니다(전체 중복 %s건)."
               "</div>" % (len(c.items), _fmt(c.dup_units)))
         A("<table><tr><th>#</th><th>구분</th><th>학습셋 위치</th><th>시험셋 위치</th>"
-          "<th class='num'>유사도</th><th>내용 미리보기 (학습 / 시험)</th></tr>")
+          "<th class='num'>근사 일치도</th><th>내용 미리보기 (학습 / 시험)</th></tr>")
         for i, it in enumerate(c.items, 1):
             pill = "p-exact" if it.kind == "exact" else "p-near"
             kname = "완전 일치" if it.kind == "exact" else "근사 중복"
@@ -183,6 +183,8 @@ def build_html(result):
       "수치는 유효자리 12자리로, 문자열은 앞뒤 공백을 제거한 뒤 비교합니다.<br>"
       "<b>근사 중복</b>: 수치는 지정한 소수점 자리로 반올림, 문자열은 공백·대소문자·유니코드 형태를 정규화한 뒤 "
       "비교하며, 텍스트 문서는 MinHash 기반 Jaccard 유사도, 이미지는 dHash 해밍거리로 판정합니다.<br>"
+      "<b>근사 일치도</b>: 위 근사 기준으로 잰 값입니다. 검사 항목마다 재는 방법이 다르며, "
+      "이미지는 축소판을 비교하므로 1.00이어도 원본 픽셀까지 같다는 뜻은 아닙니다.<br>"
       "<b>유의</b>: 근사 중복은 통계적 추정에 기반하므로 소수의 오탐/미탐이 있을 수 있습니다. "
       "최종 판단은 표시된 위치의 원본 데이터를 확인하여 수행하시기 바랍니다.</div>")
 
