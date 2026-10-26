@@ -113,5 +113,5 @@ def run(ctx, cfg, train_files, test_files, train_root, test_root):
         ctx.step()
 
     if cfg.near and thr > 7:
-        res.notes.append("해밍거리 임계값이 7보다 크면 후보 탐색 과정에서 일부 유사쌍을 놓칠 수 있습니다.")
+        res.notes.append("이미지 허용오차가 7보다 크면 후보를 좁히는 과정에서 일부 유사쌍을 놓칠 수 있습니다.")
     return res

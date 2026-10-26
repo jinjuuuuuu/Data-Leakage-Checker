@@ -161,7 +161,7 @@ def build_html(result):
         ("exclude_columns", "제외 컬럼"), ("key_columns", "기준 컬럼(지정 시 이 컬럼만 비교)"),
         ("ignore_column_order", "컬럼 순서 무시"), ("float_decimals", "수치 허용오차(소수점 자리)"),
         ("text_cell_normalize", "셀 공백·대소문자 무시"), ("text_similarity", "텍스트 유사도 임계값"),
-        ("text_min_chars", "텍스트 최소 길이"), ("image_hamming", "이미지 해밍거리 임계값"),
+        ("text_min_chars", "텍스트 최소 길이"), ("image_hamming", "이미지 허용오차"),
         ("max_rows_per_file", "파일당 최대 행(0=무제한)"), ("csv_sep", "CSV 구분자(공백=자동)"),
         ("max_samples_in_report", "리포트 표시 상한"),
     ]

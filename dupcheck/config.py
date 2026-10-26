@@ -4,7 +4,7 @@ from dataclasses import dataclass, field, asdict
 from typing import List
 
 APP_NAME = "AI 학습/시험 데이터 중복성 검사기"
-APP_VERSION = "1.0.3"
+APP_VERSION = "1.0.4"
 
 # 카테고리 키
 CAT_TABULAR = "tabular"
